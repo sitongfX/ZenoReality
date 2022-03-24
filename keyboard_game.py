@@ -64,7 +64,7 @@ goal_animate.start()
 
 
 a = Audio('yamato', pitch=1, loop=True, autoplay=True)
-a.volume = 0 
+a.volume = 20
 
 def input(key):
     if key == 'm':
