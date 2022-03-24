@@ -13,14 +13,14 @@ Prerequite:
 1. Make sure ursina engine is downloaded.
 2. Have Python 3.6 or newer.
 
-Then use the following command to run the program under the project path:
+Use the following command to run the program under the project path:
 
 ``` bash
 # install ursina in terminal
 pip install ursina
 
 
-# cd to the project folder, then run the game with the appropriate version
+# run the game with the appropriate version
 python keyboard_game.py     # if you are not playing with a controller
 ```
 or 
