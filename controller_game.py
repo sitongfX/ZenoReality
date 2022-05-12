@@ -1,4 +1,3 @@
-import serial
 from tkinter import Button
 from turtle import color
 from random import randint

@@ -1,4 +1,4 @@
-import serial
+# import serial
 
 # change the port as necessary by your OS
 
