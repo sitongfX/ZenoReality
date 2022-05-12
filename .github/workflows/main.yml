@@ -47,14 +47,12 @@ jobs:
           pip install pytest-cov
     
       - name: Run with tests
-        run: pytest --cov 
+        run: pytest --cov=./ --cov-report=xml
       
       - name: Upload report for Codecov
         uses: codecov/codecov-action@v3.1.0
         with:
-          files: ./coverage1.xml,./coverage2.xml
           verbose: true
-
       
         
       
