@@ -44,3 +44,13 @@ jobs:
         # Run the tests. I'm using pytest and the file is in the tests directory.
       - name: Run tests
         run: pytest
+      
+      - name: Generate report for Codecov
+        uses: codecov/codecov-action@v3.1.0
+        with:
+          files: ./coverage1.xml,./coverage2.xml
+          verbose: true
+
+      
+        
+      
