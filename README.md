@@ -1,5 +1,6 @@
 # ZenoReality
 
+![GitHub](https://img.shields.io/github/license/sitongfX/ZenoReality)
 
 ## What is it
 The project uses a interactive controller to journey into a philosophical game with absolute freedom. See detailed [project](https://water-honeydew-380.notion.site/Zeno-s-Reality-82fa3e4c468e4e0d86211cccd4c22275) page for hardware guide.The game uses [ursina](https://www.ursinaengine.org/), an open source game engine and Python.
