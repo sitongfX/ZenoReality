@@ -1,78 +1,24 @@
 from tkinter import Button
 from turtle import color
+from random import randint
+
 from ursina import *
 from ursina.prefabs.first_person_controller import FirstPersonController
 
-app  =  Ursina()
 
-player  =  FirstPersonController(
-  collider = 'box',
-  speed = 5,
-  scale = 2,
-  max_jumps=2
-)
-B = Button(scale=0.1, icon="sword", position = (0.65, 0.4))
-B.on_click = B.fade_out(duration=0.5)
+def audio_adjust(key_input):
+    if key_input == 'm':
+        a.volume = 0
+        return True
 
-ground  =  Entity(
-  model = 'plane',
-  texture = 'grass',
-  collider = 'mesh',
-  scale = (30,0,3)
-)
-
-bridge1  =  Entity(
-  model = 'cube',
-  # color = color.violet,
-  texture = 'brick',
-  scale = (0.4,0.1,53),
-  z = 28,x = -0.7
-)
-
-bridge2 = duplicate(bridge1, x = -3.7)
-bridge3 = duplicate(bridge1, x = 0.6)
-bridge4 = duplicate(bridge1, x = 3.6)
-
-from random import randint
-blocks = []
-for i in range(12):
-  block = Entity(
-    model = 'cube', 
-    collider = 'box',
-    color = color.white33,
-    position = (2,0.1,3+i*4),
-    scale = (3,0.1,2.5)
-  )
-  block2 = duplicate(block, x = -2.2)
-
-  blocks.append(
-    (block, block2, randint(0,3)>0,randint(0,3)>0)
-  )
-
-goal = Entity(
-  color = color.brown,
-  collider = 'box',
-  model='cube',
-  scale=(10,1,10), 
-  z=55
-)
-
-
-goal_animate = Sequence(1, Func(goal.blink, duration = 5), Func(goal.shake, duration=15), Loop = True)
-goal_animate.start()
-
-
-
-a = Audio('yamato', pitch=1, loop=True, autoplay=True)
-a.volume = 20
+def color_adjust(key_input):
+    if key_input == 'c':
+        goal.color = color.rgb(randint(0,255), randint(0,255),randint(0,255))
+        return True
 
 def input(key):
-    if key == 'm':
-        a.volume = 0
-    if key == 'c':
-        goal.color = color.rgb(randint(0,255), randint(0,255),randint(0,255))
-
-
+    audio_adjust(key)
+    color_adjust(key)
 
 def update():
 
@@ -111,6 +57,66 @@ def update():
       # else:
       #   player.z = player.z - rewind_dis
 
+app  =  Ursina()
+
+player  =  FirstPersonController(
+  collider = 'box',
+  speed = 5,
+  scale = 2,
+  max_jumps=2
+)
+B = Button(scale=0.1, icon="sword", position = (0.65, 0.4))
+B.on_click = B.fade_out(duration=0.5)
+
+ground  =  Entity(
+  model = 'plane',
+  texture = 'grass',
+  collider = 'mesh',
+  scale = (30,0,3)
+)
+
+bridge1  =  Entity(
+  model = 'cube',
+  # color = color.violet,
+  texture = 'brick',
+  scale = (0.4,0.1,53),
+  z = 28,x = -0.7
+)
+
+bridge2 = duplicate(bridge1, x = -3.7)
+bridge3 = duplicate(bridge1, x = 0.6)
+bridge4 = duplicate(bridge1, x = 3.6)
+
+blocks = []
+for i in range(12):
+  block = Entity(
+    model = 'cube', 
+    collider = 'box',
+    color = color.white33,
+    position = (2,0.1,3+i*4),
+    scale = (3,0.1,2.5)
+  )
+  block2 = duplicate(block, x = -2.2)
+
+  blocks.append(
+    (block, block2, randint(0,3)>0,randint(0,3)>0)
+  )
+
+goal = Entity(
+  color = color.brown,
+  collider = 'box',
+  model='cube',
+  scale=(10,1,10), 
+  z=55
+)
+
+
+goal_animate = Sequence(1, Func(goal.blink, duration = 5), Func(goal.shake, duration=15), Loop = True)
+goal_animate.start()
+
+
+a = Audio('yamato', pitch=1, loop=True, autoplay=True)
+a.volume = 20
 
 class Man(FrameAnimation3d):
   def __init__(self):
@@ -124,7 +130,6 @@ class Man(FrameAnimation3d):
         position = (-2,0.5,-5),
         texture = "Uriel_diffuse"
       )  
-
 
 firstMan = Man()
 window.title = "Zeno's reality"

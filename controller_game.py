@@ -6,18 +6,21 @@ from random import randint
 from ursina import *
 from ursina.prefabs.first_person_controller import FirstPersonController
 
+from connecting_serial_controller import connect_ser
 
 # two parts
 # 1. get message from json manually
 
+  # functions: 
   # potentiometer = camera height
   # joystick = direction of the player
   # button = rewind the time
 
+ser = connect_ser()
+
 # 2. the game
 
-# change the port as necessary by your OS
-ser  =  serial.Serial('/dev/cu.wchusbserial531C0151591', 250000)
+
 
 while(True):
 
