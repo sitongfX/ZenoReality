@@ -42,10 +42,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
       
-      - name: Install Codecov
+      - name: Install Codecov for pytest
         run: |
-          pip install coverage
-          coverage run -m unittest
+          pip install pytest-cov
     
       - name: Run with tests
         run: pytest --cov 
