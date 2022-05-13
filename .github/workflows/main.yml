@@ -42,14 +42,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
           pip install pytest-cov
-          pip install black flake8
+          pip install black
 
       - name: Run linters
         uses: wearerequired/lint-action@v2
         with:
           black: true
-          flake8: true
-  
+          
       - name: Run with tests
         run: pytest --cov=./ --cov-report=xml
       
