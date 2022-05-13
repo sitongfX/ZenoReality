@@ -13,11 +13,19 @@ A prettier read-me is [here](https://sitongfx.github.io/ZenoReality/) too.
 
 ## Demo Picture
 Game Scene: 
+**click image to see a demo trailler**
 [![game](game.png)](https://youtu.be/ThDYJI4Rjx4)
 click image to see a demo trailler
 
 Controller:
 ![controller](controller.jpg)
+
+## API Guide
+
+Sample auto-generated api documentation:
+![api](api.jpg)
+
+more api pages under folder [/autogen_api](https://github.com/sitongfX/ZenoReality/tree/main/autogen_api)
 
 
 Prerequite:
