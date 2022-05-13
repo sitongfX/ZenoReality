@@ -6,6 +6,7 @@ from ursina import *
 from ursina.prefabs.first_person_controller import FirstPersonController
 
 
+# user customizations
 def audio_adjust(key_input):
     if key_input == "m":
         a.volume = 0
@@ -17,11 +18,13 @@ def color_adjust(key_input):
         goal.color = color.rgb(randint(0, 255), randint(0, 255), randint(0, 255))
         return True
 
+
 def input(key):
     audio_adjust(key)
     color_adjust(key)
 
 
+# constant update during game
 def update():
 
     if held_keys["q"]:  # If q is pressed
@@ -67,7 +70,9 @@ def update():
 
 app = Ursina()
 
+# set up objects in the scene
 player = FirstPersonController(collider="box", speed=5, scale=2, max_jumps=2)
+
 B = Button(scale=0.1, icon="sword", position=(0.65, 0.4))
 B.on_click = B.fade_out(duration=0.5)
 
@@ -108,10 +113,13 @@ goal_animate = Sequence(
 goal_animate.start()
 
 
+# audio settings
+
 a = Audio("yamato", pitch=1, loop=True, autoplay=True)
 a.volume = 20
 
 
+# animation and model of the opponent
 class Man(FrameAnimation3d):
     def __init__(self):
         super().__init__(
@@ -131,4 +139,5 @@ window.title = "Zeno's reality"
 Sky(texture="sky_sunset", rotation=(0, 90, 0))
 scene.fog_density = 0.1  # sets exponential density
 scene.fog_density = (50, 200)
+# start the game
 app.run()
