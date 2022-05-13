@@ -1,0 +1,14 @@
+Welcome to Zeno_Reality's documentation!
+========================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+
+
+first header
+------------------
+
+* some bullet
+* some bullet

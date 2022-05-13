@@ -2,3 +2,7 @@ __pycache__
 *.pyc
 .DS_Store
 .coverage
+
+docs/_buid
+docs/_static
+docs/_templates
