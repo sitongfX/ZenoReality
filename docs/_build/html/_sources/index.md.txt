@@ -8,7 +8,7 @@ This is a fun action game made with python and ursina, an opensource game engine
 
 ## Game Demo
 
-[Trailer](https://youtu.be/ThDYJI4Rjx4)
+[Check Out Trailer Here!](https://youtu.be/ThDYJI4Rjx4)
 
 Trailer of your adventure in Zeno’s Reality.
 
@@ -16,7 +16,7 @@ Trailer of your adventure in Zeno’s Reality.
 ## Artistic Vision (Very Abstract)
 
 One of my favorite Zeno’s paradoxes is about the illusion of motion.
- and the tortoise are in a race, in which the tortoise would start before Achilles, and it causes the latter to always fall behind. 
+Achilles and the tortoise are in a race, in which the tortoise would start before Achilles, and it causes the latter to always fall behind. 
 
 The reason of this is recounted by Aristotle in his *Physics VI*:9, 239b15:
 
@@ -57,6 +57,14 @@ with game controller
 </aside>
 
 
+## Code
+
+Go to [github!](https://github.com/sitongfX/ZenoReality/tree/main)
+
+
+## API guide
+
+For auto-generated api documentation, check pages under folder [/autogen_api](https://github.com/sitongfX/ZenoReality/tree/main/autogen_api)
 
 
 ## Guide for Building the Controller
@@ -72,10 +80,10 @@ with game controller
 ### Detailed Step
 
 1. Connect the wires
+    
     1.can use female-to-female wires or solderless breadboard instead of soldering the wires for convenience
     2. for button, connect to pin 15 and ground on TTGO T-display
     3. for potentiometer’s 3 pins, connect to bottom left 3.3V, pin 12, and ground correspondingly
-
     4. for joystick, the connection should be as follows:
         
         - Joystick GND -> bottom right ground on the TTGO	
@@ -102,3 +110,4 @@ with game controller
 .. note::
    Be mindful of the serial data transmission between your devices. When using joystick, wait patiently for actions to synchronize between devices.
 ```
+

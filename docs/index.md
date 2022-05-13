@@ -64,7 +64,7 @@ Go to [github!](https://github.com/sitongfX/ZenoReality/tree/main)
 
 ## API guide
 
-For auto-generated api documentation, check pages under folder /autogen_api
+For auto-generated api documentation, check pages under folder [/autogen_api](https://github.com/sitongfX/ZenoReality/tree/main/autogen_api)
 
 
 ## Guide for Building the Controller
@@ -80,10 +80,10 @@ For auto-generated api documentation, check pages under folder /autogen_api
 ### Detailed Step
 
 1. Connect the wires
+    
     1.can use female-to-female wires or solderless breadboard instead of soldering the wires for convenience
     2. for button, connect to pin 15 and ground on TTGO T-display
     3. for potentiometer’s 3 pins, connect to bottom left 3.3V, pin 12, and ground correspondingly
-
     4. for joystick, the connection should be as follows:
         
         - Joystick GND -> bottom right ground on the TTGO	

@@ -42,6 +42,8 @@
 <li><a class="reference internal" href="#game-demo">Game Demo</a></li>
 <li><a class="reference internal" href="#artistic-vision-very-abstract">Artistic Vision (Very Abstract)</a></li>
 <li><a class="reference internal" href="#game-instructions">Game Instructions</a></li>
+<li><a class="reference internal" href="#code">Code</a></li>
+<li><a class="reference internal" href="#api-guide">API guide</a></li>
 <li><a class="reference internal" href="#guide-for-building-the-controller">Guide for Building the Controller</a><ul>
 <li><a class="reference internal" href="#materials-needed">Materials Needed</a></li>
 <li><a class="reference internal" href="#detailed-step">Detailed Step</a></li>
@@ -83,13 +85,13 @@
 </section>
 <section id="game-demo">
 <h2>Game Demo<a class="headerlink" href="#game-demo" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://youtu.be/ThDYJI4Rjx4">Trailer</a></p>
+<p><a class="reference external" href="https://youtu.be/ThDYJI4Rjx4">Check Out Trailer Here!</a></p>
 <p>Trailer of your adventure in Zeno’s Reality.</p>
 </section>
 <section id="artistic-vision-very-abstract">
 <h2>Artistic Vision (Very Abstract)<a class="headerlink" href="#artistic-vision-very-abstract" title="Permalink to this headline">¶</a></h2>
 <p>One of my favorite Zeno’s paradoxes is about the illusion of motion.
- and the tortoise are in a race, in which the tortoise would start before Achilles, and it causes the latter to always fall behind.</p>
+Achilles and the tortoise are in a race, in which the tortoise would start before Achilles, and it causes the latter to always fall behind.</p>
 <p>The reason of this is recounted by Aristotle in his <em>Physics VI</em>:9, 239b15:</p>
 <blockquote>
 <div><p>“In a race, the quickest runner can never over­take the slowest, since the pursuer must first reach the point whence the pursued started, so that the slower must always hold a lead.”</p>
@@ -119,6 +121,14 @@ with game controller<ul class="simple">
 <li><p>other unmentioned operations are same as the keyboard version.</p></li>
 </ul>
 </aside></section>
+<section id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<p>Go to <a class="reference external" href="https://github.com/sitongfX/ZenoReality/tree/main">github!</a></p>
+</section>
+<section id="api-guide">
+<h2>API guide<a class="headerlink" href="#api-guide" title="Permalink to this headline">¶</a></h2>
+<p>For auto-generated api documentation, check pages under folder <a class="reference external" href="https://github.com/sitongfX/ZenoReality/tree/main/autogen_api">/autogen_api</a></p>
+</section>
 <section id="guide-for-building-the-controller">
 <h2>Guide for Building the Controller<a class="headerlink" href="#guide-for-building-the-controller" title="Permalink to this headline">¶</a></h2>
 <section id="materials-needed">
@@ -133,22 +143,23 @@ with game controller<ul class="simple">
 </section>
 <section id="detailed-step">
 <h3>Detailed Step<a class="headerlink" href="#detailed-step" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
-<li><p>Connect the wires
-1.can use female-to-female wires or solderless breadboard instead of soldering the wires for convenience
+<ol>
+<li><p>Connect the wires</p>
+<p>1.can use female-to-female wires or solderless breadboard instead of soldering the wires for convenience
 2. for button, connect to pin 15 and ground on TTGO T-display
-3. for potentiometer’s 3 pins, connect to bottom left 3.3V, pin 12, and ground correspondingly</p>
-<ol class="simple">
-<li><p>for joystick, the connection should be as follows:</p>
-<ul class="simple">
-<li><p>Joystick GND -&gt; bottom right ground on the TTGO</p></li>
-<li><p>Joystick 5V -&gt; top right 3V</p></li>
-<li><p>Joystick VRy -&gt; TTGO 27</p></li>
-<li><p>Joystick VRx -&gt; TTGO 26</p></li>
-<li><p>Joystick SW  -&gt; TTGO 25</p></li>
-</ul>
-</li>
-</ol>
+3. for potentiometer’s 3 pins, connect to bottom left 3.3V, pin 12, and ground correspondingly
+4. for joystick, the connection should be as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">-</span> <span class="n">Joystick</span> <span class="n">GND</span> <span class="o">-&gt;</span> <span class="n">bottom</span> <span class="n">right</span> <span class="n">ground</span> <span class="n">on</span> <span class="n">the</span> <span class="n">TTGO</span>	
+
+ <span class="o">-</span> <span class="n">Joystick</span> <span class="mi">5</span><span class="n">V</span> <span class="o">-&gt;</span> <span class="n">top</span> <span class="n">right</span> <span class="mi">3</span><span class="n">V</span>
+
+ <span class="o">-</span> <span class="n">Joystick</span> <span class="n">VRy</span> <span class="o">-&gt;</span> <span class="n">TTGO</span> <span class="mi">27</span>
+
+ <span class="o">-</span> <span class="n">Joystick</span> <span class="n">VRx</span> <span class="o">-&gt;</span> <span class="n">TTGO</span> <span class="mi">26</span>
+
+ <span class="o">-</span> <span class="n">Joystick</span> <span class="n">SW</span>  <span class="o">-&gt;</span> <span class="n">TTGO</span> <span class="mi">25</span>
+</pre></div>
+</div>
 </li>
 <li><p>Build enclosures</p>
 <ol class="simple">
