@@ -23,7 +23,7 @@ Controller:
 ## API Guide
 
 Sample auto-generated api documentation:
-![api](api.jpg)
+<img width="694" alt="api" src="https://user-images.githubusercontent.com/71209023/168211575-d28cdf47-2f16-4054-be63-fb71de95396e.png">
 
 more api pages under folder [/autogen_api](https://github.com/sitongfX/ZenoReality/tree/main/autogen_api)
 
