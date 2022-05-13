@@ -11,7 +11,7 @@ void setup() {
   
   while (!Serial) continue;
   pinMode(15, INPUT_PULLUP);
-
+  
 }
 
 // button - ground and pin 15, pressed as 0, normal as 1
@@ -37,5 +37,4 @@ void loop(){
   serializeJson(doc, s);
   Serial.print(s);
   Serial.print("\n");  
-
 }
