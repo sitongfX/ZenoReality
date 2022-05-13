@@ -58,12 +58,10 @@ from recommonmark.transform import AutoStructify
 
 def setup(app):
     app.add_config_value(
-
         "recommonmark_config", 
         {
             "auto_toc_tree_section": "Contents",
         },
-        
         True
     )
     app.add_transform(AutoStructify)
