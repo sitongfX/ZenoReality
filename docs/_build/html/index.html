@@ -38,7 +38,15 @@
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">Welcome to Zeno_Reality’s documentation!</a><ul>
-<li><a class="reference internal" href="#first-header">first header</a></li>
+<li><a class="reference internal" href="#about">About</a></li>
+<li><a class="reference internal" href="#game-demo">Game Demo</a></li>
+<li><a class="reference internal" href="#artistic-vision-very-abstract">Artistic Vision (Very Abstract)</a></li>
+<li><a class="reference internal" href="#game-instructions">Game Instructions</a></li>
+<li><a class="reference internal" href="#guide-for-building-the-controller">Guide for Building the Controller</a><ul>
+<li><a class="reference internal" href="#materials-needed">Materials Needed</a></li>
+<li><a class="reference internal" href="#detailed-step">Detailed Step</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -69,16 +77,99 @@
              
   <section id="welcome-to-zeno-reality-s-documentation">
 <h1>Welcome to Zeno_Reality’s documentation!<a class="headerlink" href="#welcome-to-zeno-reality-s-documentation" title="Permalink to this headline">¶</a></h1>
-<section id="first-header">
-<h2>first header<a class="headerlink" href="#first-header" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>some bullet</p></li>
-<li><p>some bullet</p></li>
+<section id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>This is a fun action game made with python and ursina, an opensource game engine.</p>
+</section>
+<section id="game-demo">
+<h2>Game Demo<a class="headerlink" href="#game-demo" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://youtu.be/ThDYJI4Rjx4">Trailer</a></p>
+<p>Trailer of your adventure in Zeno’s Reality.</p>
+</section>
+<section id="artistic-vision-very-abstract">
+<h2>Artistic Vision (Very Abstract)<a class="headerlink" href="#artistic-vision-very-abstract" title="Permalink to this headline">¶</a></h2>
+<p>One of my favorite Zeno’s paradoxes is about the illusion of motion.
+ and the tortoise are in a race, in which the tortoise would start before Achilles, and it causes the latter to always fall behind.</p>
+<p>The reason of this is recounted by Aristotle in his <em>Physics VI</em>:9, 239b15:</p>
+<blockquote>
+<div><p>“In a race, the quickest runner can never over­take the slowest, since the pursuer must first reach the point whence the pursued started, so that the slower must always hold a lead.”</p>
+</div></blockquote>
+<p>Of course, in reality, this would never happen.</p>
+<p>But I want to give Zeno a chance, to turn his paradox into reality, in the game I created. Thus, you the player will play the tortoise to outrun Achilles. The race is set on a glass bridge in the sky, so Achilles has to slow down to safely walk through the bridge. More, you are given the superpower to rewind the time and dash through the bridge without falling.</p>
+<p>You will help prove that, some truths are mistaken as paradoxes (under extreme conditions).</p>
+</section>
+<section id="game-instructions">
+<h2>Game Instructions<a class="headerlink" href="#game-instructions" title="Permalink to this headline">¶</a></h2>
+<p>There are two versions of the game. If you don’t have the hardware to make a game controller, you can play the keyboard version.</p>
+<aside>
+with keyboard<ul class="simple">
+<li><p>press C to change the color of the goal</p></li>
+<li><p>press M to mute</p></li>
+<li><p>press Q to elevate camera</p></li>
+<li><p>press A to lower camera</p></li>
+<li><p>use arrow keys to control the direction of the player</p></li>
+<li><p>use R to make the opponent retreat some random steps</p></li>
+<li><p>hold space to accelerate forward</p></li>
 </ul>
+</aside><aside>
+with game controller<ul class="simple">
+<li><p>use joystick to control the direction of the player</p></li>
+<li><p>use potentiometer to control the camera height</p></li>
+<li><p>press the button to make the opponent retreat, aka rewind the time.</p></li>
+<li><p>other unmentioned operations are same as the keyboard version.</p></li>
+</ul>
+</aside></section>
+<section id="guide-for-building-the-controller">
+<h2>Guide for Building the Controller<a class="headerlink" href="#guide-for-building-the-controller" title="Permalink to this headline">¶</a></h2>
+<section id="materials-needed">
+<h3>Materials Needed<a class="headerlink" href="#materials-needed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>ESP32 TTGO T-display</p></li>
+<li><p>battery</p></li>
+<li><p>a button</p></li>
+<li><p>a joystick</p></li>
+<li><p>a potentiometer</p></li>
+</ul>
+</section>
+<section id="detailed-step">
+<h3>Detailed Step<a class="headerlink" href="#detailed-step" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Connect the wires
+1.can use female-to-female wires or solderless breadboard instead of soldering the wires for convenience
+2. for button, connect to pin 15 and ground on TTGO T-display
+3. for potentiometer’s 3 pins, connect to bottom left 3.3V, pin 12, and ground correspondingly</p>
+<ol class="simple">
+<li><p>for joystick, the connection should be as follows:</p>
+<ul class="simple">
+<li><p>Joystick GND -&gt; bottom right ground on the TTGO</p></li>
+<li><p>Joystick 5V -&gt; top right 3V</p></li>
+<li><p>Joystick VRy -&gt; TTGO 27</p></li>
+<li><p>Joystick VRx -&gt; TTGO 26</p></li>
+<li><p>Joystick SW  -&gt; TTGO 25</p></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>Build enclosures</p>
+<ol class="simple">
+<li><p>use durable material to enclose every hardware piece inside</p></li>
+<li><p>design appropriate layout that is suitable for human natural posture</p></li>
+</ol>
+</li>
+<li><p>Download the code</p>
+<ol class="simple">
+<li><p>upload the code to the ESP32</p></li>
+<li><p>check the serial message in json (using serial monitor from Arduino IDE)</p></li>
+<li><p>fix the code to make sure it works properly on your computer</p></li>
+</ol>
+</li>
+<li><p>Begin the journey to Zeno’s reality</p></li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>WE CAN</p>
+<p>Be mindful of the serial data transmission between your devices. When using joystick, wait patiently for actions to synchronize between devices.</p>
 </div>
+</section>
 </section>
 </section>
 
