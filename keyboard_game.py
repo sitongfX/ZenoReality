@@ -17,7 +17,6 @@ def color_adjust(key_input):
         goal.color = color.rgb(randint(0, 255), randint(0, 255), randint(0, 255))
         return True
 
-
 def input(key):
     audio_adjust(key)
     color_adjust(key)
