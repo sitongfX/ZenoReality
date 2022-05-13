@@ -6,12 +6,13 @@
 ![Read the Docs](https://img.shields.io/readthedocs/zenoreality)
 
 ## What is it
-The project uses a interactive controller to journey into a philosophical game with absolute freedom. See detailed [project](https://water-honeydew-380.notion.site/Zeno-s-Reality-82fa3e4c468e4e0d86211cccd4c22275) page for hardware guide.The game uses [ursina](https://www.ursinaengine.org/), an open source game engine and Python.
+The project uses a interactive controller to journey into a philosophical game with absolute freedom. See detailed [project](https://water-honeydew-380.notion.site/Zeno-s-Reality-82fa3e4c468e4e0d86211cccd4c22275) page for hardware building and playing instructions.The game uses [ursina](https://www.ursinaengine.org/), an open source game engine and Python.
 
 
 ## Demo Picture
 Game Scene: 
-![game](game.png)
+[![game](game.png)](https://youtu.be/ThDYJI4Rjx4)
+click image to see a demo trailler
 
 Controller:
 ![controller](controller.jpg)
